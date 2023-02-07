@@ -5,17 +5,17 @@ import java.util.Date;
 
 
 public class Utakmica extends Entitet {
-	private Entitet domaciKlub;
-	private Entitet gostiKlub;
-	private Date vrijemePocetka;
-	private int maksimalanBrojNavijaca;
+	private String domaciKlub;
+	private String gostiKlub;
+	private String vrijemePocetka;
+	private String maksimalanBrojNavijaca;
 	private String stadion;
 
 	public Utakmica() {
 		super();
 	}
 
-	public Utakmica(int sifra, Entitet domaciKlub, Entitet gostiKlub, Date vrijemePocetka, int maksimalanBrojNavijaca,
+	public Utakmica(int sifra, String domaciKlub, String gostiKlub, String vrijemePocetka, String maksimalanBrojNavijaca,
 			String stadion) {
 		super(sifra);
 		this.domaciKlub = domaciKlub;
@@ -25,35 +25,35 @@ public class Utakmica extends Entitet {
 		this.stadion = stadion;
 	}
 
-	public Entitet getDomaciKlub() {
+	public String getDomaciKlub() {
 		return domaciKlub;
 	}
 
-	public void setDomaciKlub(Entitet domaciKlub) {
+	public void setDomaciKlub(String domaciKlub) {
 		this.domaciKlub = domaciKlub;
 	}
 
-	public Entitet getGostiKlub() {
+	public String getGostiKlub() {
 		return gostiKlub;
 	}
 
-	public void setGostiKlub(Entitet gostiKlub) {
+	public void setGostiKlub(String gostiKlub) {
 		this.gostiKlub = gostiKlub;
 	}
 
-	public Date getVrijemePocetka() {
+	public String getVrijemePocetka() {
 		return vrijemePocetka;
 	}
 
-	public void setVrijemePocetka(Date vrijemePocetka) {
+	public void setVrijemePocetka(String vrijemePocetka) {
 		this.vrijemePocetka = vrijemePocetka;
 	}
 
-	public int getMaksimalanBrojNavijaca() {
+	public String getMaksimalanBrojNavijaca() {
 		return maksimalanBrojNavijaca;
 	}
 
-	public void setMaksimalanBrojNavijaca(int maksimalanBrojNavijaca) {
+	public void setMaksimalanBrojNavijaca(String maksimalanBrojNavijaca) {
 		this.maksimalanBrojNavijaca = maksimalanBrojNavijaca;
 	}
 
