@@ -1,6 +1,6 @@
 package nogometnaStatistika01;
 
-import java.util.Date;
+
 
 
 
@@ -64,5 +64,11 @@ public class Utakmica extends Entitet {
 	public void setStadion(String stadion) {
 		this.stadion = stadion;
 	}
+
+	@Override
+	public String toString() {
+		return "⚽"+domaciKlub +" "+"vs"+" "+ gostiKlub +" "+ "*"+vrijemePocetka +"*"+" "+"--->"+" "+ stadion ;
+	}
+	
 
 }

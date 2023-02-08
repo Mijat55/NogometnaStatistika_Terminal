@@ -8,25 +8,24 @@ import nogometnaStatistika.Pomocno;
 import nogometnaStatistika.Start;
 import nogometnaStatistika01.Klub;
 
-
 public class Klubovi {
 	private List<Klub> klubovi;
 	private Start start;
-	
 
 	public Klubovi(Start start) {
 		super();
-		this.start= start;
+		this.start = start;
 		klubovi = new ArrayList<>();
 		testPodaci();
 	}
 
-	public Klubovi(List<Klub> klubovi,Start start) {
+	public Klubovi(List<Klub> klubovi, Start start) {
 		super();
 		this.klubovi = klubovi;
 		this.start = start;
 		testPodaci();
 	}
+
 	public void klubIzbornik() {
 		System.out.println("+++++++++++++++++++++++++++++++++++++");
 		System.out.println("*Klub*");
@@ -56,6 +55,7 @@ public class Klubovi {
 			start.odabirGlavnogIzbornika();
 		}
 	}
+
 	private void testPodaci() {
 		if (Pomocno.DEV) {
 			klubovi.add(new Klub());
@@ -71,6 +71,5 @@ public class Klubovi {
 	public void setKlubovi(List<Klub> klubovi) {
 		this.klubovi = klubovi;
 	}
-	
 
 }

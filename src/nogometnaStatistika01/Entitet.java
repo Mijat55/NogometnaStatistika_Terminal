@@ -1,6 +1,6 @@
 package nogometnaStatistika01;
 
-abstract class Entitet {
+public abstract class Entitet {
 private int sifra;
 	
 

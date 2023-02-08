@@ -2,7 +2,8 @@ package nogometnaStatistika;
 
 import java.util.Scanner;
 
-import nogometnaStatistika01.Utakmica;
+
+
 import nogometnaStatistikaObrada.Dogadjaji;
 import nogometnaStatistikaObrada.Igraci;
 import nogometnaStatistikaObrada.Klubovi;
@@ -29,8 +30,8 @@ public class Start {
 	}
 
 	public void glavniIzbornik() {
-		System.out.println("+++++++++++++++++++++++++++++++++++++");
-		System.out.println("Odaberite jednu od dostupnih opcija :");
+		System.out.println("⚽~~~~~~~~~~~~~~~~~~~~~⚽~~~~~~~~~~~~~~~~~~~~~⚽");
+		System.out.println("ODABERITE JEDNU OD DOSTUPNIH OPCIJA:");
 		System.out.println("1) Utakmica-");
 		System.out.println("2) Klub-");
 		System.out.println("3) Igrač-");
@@ -41,7 +42,7 @@ public class Start {
 	}
 
 	public void odabirGlavnogIzbornika() {
-		switch (Pomocno.unosBrojRaspon("Odabrana opcija: ", 1, 6)) {
+		switch (Pomocno.unosBrojRaspon("ODABRANA OPCIJA: ", 1, 6)) {
 		case 1:
 			utakmice.utakmicaIzbornik();
 			break;
@@ -65,6 +66,7 @@ public class Start {
 	}
 
 	private void ulaznaPoruka() {
+		System.out.println("⚽~~~~~~~~~~~~~~~~~~~~~⚽~~~~~~~~~~~~~~~~~~~~~⚽");
 		System.out.println("*Dobrodošli u aplikaciju Nogometna Statistika*");
 
 	}
@@ -75,6 +77,15 @@ public class Start {
 
 	public Igraci getIgraci() {
 		return igraci;
+	}
+	public Klubovi getKlubovi() {
+		return klubovi;
+	}
+	public Dogadjaji getDogadjaji() {
+		return dogadjaji;
+	}
+	public Vrste getVrste() {
+		return vrste;
 	}
 
 	public static void main(String[] args) {
