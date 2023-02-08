@@ -93,6 +93,7 @@ public class Utakmice {
 		utakmicaIzbornik();
 	}
 
+
 	private void izmjena() {
 		pregled(false);
 		int rb = Pomocno.unosBrojRaspon("ODABERITE UTAKMICU KOJU ŽELITE PROMIJENITI: ", 1, utakmice.size());
