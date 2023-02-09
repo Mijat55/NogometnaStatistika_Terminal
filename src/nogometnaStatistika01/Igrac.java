@@ -1,22 +1,25 @@
 package nogometnaStatistika01;
 
-import java.util.Date;
+
+
 
 public class Igrac extends Entitet{
 	private String ime;
 	private String prezime;
-	private Date datumRodjenja;
-	private int oib;
-	private double trenutnaVrijednost;
+	private String datumRodjenja;
+	private String oib;
+	private String trenutnaVrijednost;
 	private String pozicija;
 	private Klub klub;
 
 	public Igrac() {
-		//Lista za igrace??
 		super();
+	
+		
+		
 	}
 
-	public Igrac(int sifra, String ime, String prezime, Date datumRodjenja, int oib, double trenutnaVrijednost,
+	public Igrac(int sifra, String ime, String prezime, String datumRodjenja, String oib, String trenutnaVrijednost,
 			String pozicija, Klub klub) {
 		super(sifra);
 		this.ime = ime;
@@ -44,27 +47,27 @@ public class Igrac extends Entitet{
 		this.prezime = prezime;
 	}
 
-	public Date getDatumRodjenja() {
+	public String getDatumRodjenja() {
 		return datumRodjenja;
 	}
 
-	public void setDatumRodjenja(Date datumRodjenja) {
+	public void setDatumRodjenja(String datumRodjenja) {
 		this.datumRodjenja = datumRodjenja;
 	}
 
-	public int getOib() {
+	public String getOib() {
 		return oib;
 	}
 
-	public void setOib(int oib) {
+	public void setOib(String oib) {
 		this.oib = oib;
 	}
 
-	public double getTrenutnaVrijednost() {
+	public String getTrenutnaVrijednost() {
 		return trenutnaVrijednost;
 	}
 
-	public void setTrenutnaVrijednost(double trenutnaVrijednost) {
+	public void setTrenutnaVrijednost(String trenutnaVrijednost) {
 		this.trenutnaVrijednost = trenutnaVrijednost;
 	}
 
@@ -83,6 +86,12 @@ public class Igrac extends Entitet{
 	public void setKlub(Klub klub) {
 		this.klub = klub;
 	}
+
+	@Override
+	public String toString() {
+		return ime +" "+ prezime +" "+datumRodjenja +" "+ trenutnaVrijednost +" "+ pozicija +" "+klub ;
+	}
+	
 
 }
 

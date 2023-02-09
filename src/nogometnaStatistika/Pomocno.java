@@ -1,5 +1,6 @@
 package nogometnaStatistika;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class Pomocno {
@@ -38,5 +39,13 @@ public class Pomocno {
 		}	
 	}
 	
+	public static BigDecimal unosVrijednosti(String poruka) {
 
+		System.out.println(poruka);
+		String s = ulaz.nextLine();
+		return new BigDecimal(s);
+
+	}
+	
 }
+

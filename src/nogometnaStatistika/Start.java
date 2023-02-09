@@ -2,8 +2,6 @@ package nogometnaStatistika;
 
 import java.util.Scanner;
 
-
-
 import nogometnaStatistikaObrada.Dogadjaji;
 import nogometnaStatistikaObrada.Igraci;
 import nogometnaStatistikaObrada.Klubovi;
@@ -78,12 +76,15 @@ public class Start {
 	public Igraci getIgraci() {
 		return igraci;
 	}
+
 	public Klubovi getKlubovi() {
 		return klubovi;
 	}
+
 	public Dogadjaji getDogadjaji() {
 		return dogadjaji;
 	}
+
 	public Vrste getVrste() {
 		return vrste;
 	}
