@@ -122,7 +122,7 @@ public class Klubovi {
 	private Klub unesiNoviKlub() {
 		Klub k = new Klub();
 		k.setSifra(Pomocno.unosBrojRaspon("Unesi šifru utakmice: ", 1, Integer.MAX_VALUE));
-		k.setNaziv(Pomocno.unosTeksta("Unesite naziv kluba"));
+		k.setNaziv(Pomocno.unosTeksta("Unesite naziv kluba: "));
 	    return k;
 	}
 

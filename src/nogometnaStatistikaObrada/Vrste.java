@@ -26,30 +26,55 @@ public class Vrste {
 		testPodaci();
 	}
 
+	private void izmjena() {
+		pregled(false);
+		int rb = Pomocno.unosBrojRaspon("ODABERITE VRSTU KOJU ŽELITE PROMIJENITI: ", 1, vrste.size());
+		Vrsta v = vrste.get(rb - 1);
+		v.setSifra(Pomocno.unosBrojRaspon("Unesite novu sifru pod kojom će se vrsta voditi:", 1, Integer.MAX_VALUE));
+		v.setNaziv(Pomocno.unosTeksta("Unesite naziv vrste"));
+		v.setGol(Pomocno.unosPotvrde("Za izmjenu gola unesite šifu 7 ", 7));
+
+		vrstaIzbornik();
+	}
+
 	public void vrstaIzbornik() {
-		System.out.println("+++++++++++++++++++++++++++++++++++++");
-		System.out.println("*Vrsta*");
-		System.out.println("1) Popis Vrste-");
-		System.out.println("2) Pregled Vrste-");
-		System.out.println("3) Unos nove Vrste-");
-		System.out.println("4) Izmjena Vrste-");
-		System.out.println("5) Brisanje Vrste-");
-		System.out.println("6) Povratak u glavni izbornik-");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("       "+"*Vrsta*");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("1) Pregled Vrste-");
+		System.out.println("2) Unos nove Vrste-");
+		System.out.println("3) Izmjena Vrste-");
+		System.out.println("4) Brisanje Vrste-");
+		System.out.println("5) Povratak u glavni izbornik-");
 		odabirVrstaIzbornik();
 	}
 
 	private void odabirVrstaIzbornik() {
-		switch (Pomocno.unosBrojRaspon("Odabrana opcija: ", 1, 6)) {
+		switch (Pomocno.unosBrojRaspon("Odabrana opcija: ", 1, 5)) {
 		case 1:
-			// utakmicaIzbornik();
-			// break;
+			pregled(true);
+			break;
 		case 2:
-			// grupe.izbornik();
-			// break;
+			unosNoveVrste();
+			break;
 		case 3:
-			// polaznici.izbornik();
-			// break;
-		case 6:
+			if (vrste.size() == 0) {
+				System.out.println("Nema vrste" + "koje " + "bi mjenjali!");
+				vrstaIzbornik();
+			} else {
+				izmjena();
+			}
+
+			break;
+		case 4:
+			if (vrste.size() == 0) {
+				System.out.println("Nema vrste " + "kojeg " + "bi brisali!");
+				vrstaIzbornik();
+			} else {
+				brisanje();
+			}
+			break;
+		case 5:
 			System.out.println("Dobrodošli u glavni izbornik :)");
 			start.glavniIzbornik();
 			start.odabirGlavnogIzbornika();
@@ -57,11 +82,50 @@ public class Vrste {
 	}
 
 	private void testPodaci() {
-		if (Pomocno.DEV) {
-			vrste.add(new Vrsta());
-			vrste.add(new Vrsta());
+
+		vrste.add(new Vrsta(1, "Izmjena", (false)));
+		vrste.add(new Vrsta(2, "Asistencija", (false)));
+		vrste.add(new Vrsta(3, "Žuti Karton", (false)));
+		vrste.add(new Vrsta(4, "Crveni Karton", (false)));
+		vrste.add(new Vrsta(5, "Jedanaesterac", (false)));
+		vrste.add(new Vrsta(6, "Ozljeda", (false)));
+		vrste.add(new Vrsta(7, "Gol", (true)));
+
+	}
+
+	private void brisanje() {
+		pregled(false);
+		int rb = Pomocno.unosBrojRaspon("ODABERITE VRSTU KOJI ŽELITE OBRISATI: ", 1, vrste.size());
+		vrste.remove(rb - 1);
+		vrstaIzbornik();
+	}
+
+	public void pregled(boolean prikaziVrstaIzbornik) {
+		System.out.println("");
+		System.out.println("\nDOSTUPNI KLUBOVI: ");
+		System.out.println("");
+		int rb = 1;
+		for (Vrsta v : vrste) {
+			System.out.println(rb++ + ". " + v);
+		}
+		System.out.println("");
+		if (prikaziVrstaIzbornik) {
+			vrstaIzbornik();
 		}
 
+	}
+
+	private void unosNoveVrste() {
+		vrste.add(unesiNovuVrstu());
+		vrstaIzbornik();
+	}
+
+	private Vrsta unesiNovuVrstu() {
+		Vrsta v = new Vrsta();
+		v.setSifra(Pomocno.unosBrojRaspon("Unesi šifru vrste: ", 1, Integer.MAX_VALUE));
+		v.setNaziv(Pomocno.unosTeksta("Unesite naziv vrste: "));
+		v.setGol(Pomocno.unosPotvrde("Za gol unesite šifu 7", 7));
+		return v;
 	}
 
 	public List<Vrsta> getVrste() {

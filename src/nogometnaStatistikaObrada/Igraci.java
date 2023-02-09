@@ -41,7 +41,7 @@ public class Igraci {
 	}
 
 	private void odabirIgračaIzbornik() {
-		switch (Pomocno.unosBrojRaspon("ODABRANA OPCIJA: ", 1, 6)) {
+		switch (Pomocno.unosBrojRaspon("ODABRANA OPCIJA: ", 1, 5)) {
 		case 1:
 			pregled(true);
 			break;

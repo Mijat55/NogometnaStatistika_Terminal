@@ -2,13 +2,13 @@ package nogometnaStatistika01;
 
 public class Vrsta extends Entitet {
 	private String naziv;
-	private int gol;
+	private boolean gol;
 
 	public Vrsta() {
 		super();
 	}
 
-	public Vrsta(int sifra, String naziv, int gol) {
+	public Vrsta(int sifra, String naziv, boolean gol) {
 		super(sifra);
 		this.naziv = naziv;
 		this.gol = gol;
@@ -22,12 +22,17 @@ public class Vrsta extends Entitet {
 		this.naziv = naziv;
 	}
 
-	public int getGol() {
+	public boolean getGol() {
 		return gol;
 	}
 
-	public void setGol(int gol) {
+	public void setGol(boolean gol) {
 		this.gol = gol;
+	}
+
+	@Override
+	public String toString() {
+		return naziv;
 	}
 
 }

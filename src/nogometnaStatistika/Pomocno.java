@@ -46,6 +46,15 @@ public class Pomocno {
 		return new BigDecimal(s);
 
 	}
-	
+	public static boolean unosPotvrde(String poruka,int broj){
+		System.out.println("poruka");
+	    if (broj == 7) {
+	      return true;
+	    }
+	    else {
+	       return false;
+	       
+	    }
+	}
 }
 
