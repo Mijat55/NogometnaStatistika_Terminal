@@ -26,20 +26,6 @@ public class Utakmice {
 		testPodaci();
 	}
 
-	private void testPodaci() {
-		
-			utakmice.add(new Utakmica(1, "Rudeš", "Solin", "2022/10/02 15:30:00", "2000", "SC Rudes"));
-			utakmice.add(new Utakmica(2, "Cibalia", "Dugopolje", "2022/10/15 15:00:00", "5000", "HNK Cibalia"));
-			utakmice.add(new Utakmica(3,"Orijent","Vukovar 91","2022/10/22 15:00:00","3500","Krimeja"));
-			utakmice.add(new Utakmica(4,"Dugopolje","Orijent","2022/09/17 16:30:00","4000","Hrvatski Vitezovi"));
-			utakmice.add(new Utakmica(5,"Vukovar 91","Cibalia","2022/11/19 13:30:00","1800","Gradski Stadion"));
-			utakmice.add(new Utakmica(6,"Solin","Orijent","2022/10/29 15:00:00","1500","Pokraj Jadra"));
-			utakmice.add(new Utakmica(7,"Vukovar","Rudeš","2022/10/08 15:00:00","1800","Gradski Stadion"));
-			utakmice.add(new Utakmica(8,"Dugopolje","Solin","2022/10/22 13:00:00","4000","Hrvatski Vitezovi"));
-			utakmice.add(new Utakmica(9,"Cibalia","Rudeš","2022/11/12 13:00:00","5000","HNK Cibalia"));
-		
-
-	}
 
 	public void utakmicaIzbornik() {
 		System.out.println("~~~~~~~~~~~~~~~~~~~~");
@@ -85,6 +71,20 @@ public class Utakmice {
 
 		}
 	}
+	private void testPodaci() {
+		
+		utakmice.add(new Utakmica(1, "Rudeš", "Solin", "2022/10/02 15:30:00", "2000", "SC Rudes"));
+		utakmice.add(new Utakmica(2, "Cibalia", "Dugopolje", "2022/10/15 15:00:00", "5000", "HNK Cibalia"));
+		utakmice.add(new Utakmica(3,"Orijent","Vukovar 91","2022/10/22 15:00:00","3500","Krimeja"));
+		utakmice.add(new Utakmica(4,"Dugopolje","Orijent","2022/09/17 16:30:00","4000","Hrvatski Vitezovi"));
+		utakmice.add(new Utakmica(5,"Vukovar 91","Cibalia","2022/11/19 13:30:00","1800","Gradski Stadion"));
+		utakmice.add(new Utakmica(6,"Solin","Orijent","2022/10/29 15:00:00","1500","Pokraj Jadra"));
+		utakmice.add(new Utakmica(7,"Vukovar","Rudeš","2022/10/08 15:00:00","1800","Gradski Stadion"));
+		utakmice.add(new Utakmica(8,"Dugopolje","Solin","2022/10/22 13:00:00","4000","Hrvatski Vitezovi"));
+		utakmice.add(new Utakmica(9,"Cibalia","Rudeš","2022/11/12 13:00:00","5000","HNK Cibalia"));
+	
+
+}
 
 	private void brisanje() {
 		pregled(false);

@@ -1,7 +1,8 @@
 package nogometnaStatistika01;
 
-import java.util.ArrayList;
-import java.util.List;
+
+
+
 
 public class Dogadjaj extends Entitet{
 	private int minuta;
@@ -52,6 +53,11 @@ public class Dogadjaj extends Entitet{
 
 	public void setVrsta(Vrsta vrsta) {
 		this.vrsta = vrsta;
+	}
+
+	@Override
+	public String toString() {
+		return "~"+"Igrač"+"~"+"("+igrac +")"+"~"+"Utakmica"+"~"+"("+ utakmica +")"+"~"+"Događaj"+"~"+"("+ vrsta +")"+"~"+"Minut"+"~"+"("+ minuta +"'"+")";
 	}
 
 }

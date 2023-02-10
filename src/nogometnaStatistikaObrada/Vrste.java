@@ -26,20 +26,9 @@ public class Vrste {
 		testPodaci();
 	}
 
-	private void izmjena() {
-		pregled(false);
-		int rb = Pomocno.unosBrojRaspon("ODABERITE VRSTU KOJU ŽELITE PROMIJENITI: ", 1, vrste.size());
-		Vrsta v = vrste.get(rb - 1);
-		v.setSifra(Pomocno.unosBrojRaspon("Unesite novu sifru pod kojom će se vrsta voditi:", 1, Integer.MAX_VALUE));
-		v.setNaziv(Pomocno.unosTeksta("Unesite naziv vrste"));
-		v.setGol(Pomocno.unosPotvrde("Za izmjenu gola unesite šifu 7 ", 7));
-
-		vrstaIzbornik();
-	}
-
 	public void vrstaIzbornik() {
 		System.out.println("~~~~~~~~~~~~~~~~~~~~");
-		System.out.println("       "+"*Vrsta*");
+		System.out.println("       " + "*Vrsta*");
 		System.out.println("~~~~~~~~~~~~~~~~~~~~");
 		System.out.println("1) Pregled Vrste-");
 		System.out.println("2) Unos nove Vrste-");
@@ -100,9 +89,20 @@ public class Vrste {
 		vrstaIzbornik();
 	}
 
+	private void izmjena() {
+		pregled(false);
+		int rb = Pomocno.unosBrojRaspon("ODABERITE VRSTU KOJU ŽELITE PROMIJENITI: ", 1, vrste.size());
+		Vrsta v = vrste.get(rb - 1);
+		v.setSifra(Pomocno.unosBrojRaspon("Unesite novu sifru pod kojom će se vrsta voditi:", 1, Integer.MAX_VALUE));
+		v.setNaziv(Pomocno.unosTeksta("Unesite naziv vrste"));
+		v.setGol(Pomocno.unosPotvrde("Za izmjenu gola unesite šifu 7 ", 7));
+
+		vrstaIzbornik();
+	}
+
 	public void pregled(boolean prikaziVrstaIzbornik) {
 		System.out.println("");
-		System.out.println("\nDOSTUPNI KLUBOVI: ");
+		System.out.println("\nDOSTUPNE VRSTE: ");
 		System.out.println("");
 		int rb = 1;
 		for (Vrsta v : vrste) {

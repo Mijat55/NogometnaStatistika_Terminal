@@ -187,7 +187,7 @@ igraci.add(new Igrac(66,"Emanuel","Črnko","1999/04/07","88876437463","90.000€
 		igračIzbornik();
 	}
 
-	private void pregled(boolean prikaziIgračIzbornik) {
+	public void pregled(boolean prikaziIgračIzbornik) {
 		System.out.println("");
 		System.out.println("\nDOSTUPNI IGRAČI: ");
 		System.out.println("");

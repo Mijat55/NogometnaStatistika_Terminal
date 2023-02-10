@@ -67,7 +67,7 @@ public class Utakmica extends Entitet {
 
 	@Override
 	public String toString() {
-		return "⚽"+domaciKlub +" "+"vs"+" "+ gostiKlub +" "+ "*"+vrijemePocetka +"*"+" "+"--->"+" "+ stadion ;
+		return "⚽"+domaciKlub +" "+"vs"+" "+ "⚽"+gostiKlub +" "+ "*"+vrijemePocetka +"*";
 	}
 	
 
