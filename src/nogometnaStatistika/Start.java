@@ -2,11 +2,11 @@ package nogometnaStatistika;
 
 import java.util.Scanner;
 
-import nogometnaStatistikaObrada.Dogadjaji;
-import nogometnaStatistikaObrada.Igraci;
-import nogometnaStatistikaObrada.Klubovi;
-import nogometnaStatistikaObrada.Utakmice;
-import nogometnaStatistikaObrada.Vrste;
+import mijatovic.Terminal.Obrada.Dogadjaji;
+import mijatovic.Terminal.Obrada.Igraci;
+import mijatovic.Terminal.Obrada.Klubovi;
+import mijatovic.Terminal.Obrada.Utakmice;
+import mijatovic.Terminal.Obrada.Vrste;
 
 public class Start {
 	private Utakmice utakmice;
